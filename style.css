@@ -1,0 +1,169 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+html,
+body,
+#thelist {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	background: #000;
+	font-size: 16px;
+}
+
+h1 {
+	font-family: 'Roboto Slab', serif;
+	position: absolute;
+	left: 1%;
+	bottom: 20%;
+}
+h1 span {
+	display: block;
+	font-size: 13rem;
+	letter-spacing: -0.3rem;
+	line-height: 103px;
+	color: #E74C3C;
+}
+h1 .small {
+	font-size: 4.4rem;
+	letter-spacing: -0.05rem;
+	font-weight: 400;
+	color: #3498DB;
+}
+h1 .tag {
+	font-weight: 400;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.1);
+	letter-spacing: 0;
+	text-transform: uppercase;
+	font-size: 0.9rem;
+	text-indent: -1.2rem;
+}
+
+#wrapper {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+#scroller {
+	width: 5500px;
+	height: 100%;
+	float: left;
+	padding: 0;
+}
+
+#scroller ul {
+	list-style: none;
+	display: block;
+	float: left;
+	width: 5500px;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
+.child {
+	width: 500px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	/**/
+	-webkit-user-select: none;
+	cursor: -webkit-grab;
+	/**/
+	-webkit-transform: skew(-20deg);
+	-moz-transform: skew(-20deg);
+	transform: skew(-20deg);
+}
+.child:hover {
+	z-index: 10;
+	/**/
+	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.child:active {
+	cursor: -webkit-grabbing;
+}
+
+.child .photo {
+	width: 1000px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: -50%;
+	background-position: center;
+	background-size: cover;
+	opacity: 0.5;
+	/**/
+	-webkit-transform: skew(+20deg) scale(1);
+	-moz-transform: skew(+20deg) scale(1);
+	transform: skew(+20deg) scale(1);
+	/**/
+	-webkit-transition: all 0.3s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+	-moz-transition: all 0.3s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+	transition: all 0.3s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+}
+.child:hover .photo {
+	opacity: 1;
+	/**/
+	-webkit-transform: skew(+20deg) scale(1.05);
+	-moz-transform: skew(+20deg) scale(1.05);
+	transform: skew(+20deg) scale(1.05);
+}
+
+.filter {
+	width: 500px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 3;
+	background: -moz-linear-gradient(45deg, rgba(26,188,156,0.2) 0%, rgba(241,196,15,0.2) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(26,188,156,0.2)), color-stop(100%,rgba(241,196,15,0.2))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(45deg, rgba(26,188,156,0.2) 0%,rgba(241,196,15,0.2) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(45deg, rgba(26,188,156,0.2) 0%,rgba(241,196,15,0.2) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(45deg, rgba(26,188,156,0.2) 0%,rgba(241,196,15,0.2) 100%); /* IE10+ */
+	background: linear-gradient(45deg, rgba(26,188,156,0.2) 0%,rgba(241,196,15,0.2) 100%); /* W3C */
+}
+
+.iScrollHorizontalScrollbar {
+	position: absolute;
+	z-index: 9999;
+	height: 15px;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	overflow: hidden;
+	/**/
+	-webkit-transform: skew(-20deg);
+	-moz-transform: skew(-20deg);
+	transform: skew(-20deg);
+}
+
+.iScrollIndicator {
+	position: absolute;
+	background: rgba(255, 255, 255,0.1);
+	height: 15px;
+}
+
+.iScrollIndicator:hover,
+.iScrollIndicator:active {
+	background: rgba(255, 255, 255,0.5);
+}
