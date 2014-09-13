@@ -203,6 +203,8 @@ h1 .tag {
 	position: absolute;
 	top: 0;
 	left: 0;
+	-webkit-transition: opacity 0.3s ease-in-out;
+	-moz-transition: opacity 0.3s ease-in-out;
 	transition: opacity 0.3s ease-in-out;
 }
 
@@ -231,6 +233,8 @@ h1 .tag {
 	display: block;
 	padding: 130px 0 0;
 	white-space: nowrap;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
 
