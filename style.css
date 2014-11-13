@@ -127,7 +127,7 @@ h1 .tag {
 	transform: skew(+20deg) scale(1.05);
 }
 
-.child:hover .photo:after {
+.child .photo:after {
 	content: '';
 	position: absolute;
 	left: 0;
