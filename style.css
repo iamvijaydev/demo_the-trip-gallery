@@ -11,38 +11,55 @@ body,
 	overflow: hidden;
 }
 
+html {
+	font-family: 'Roboto Slab', serif;
+	font-size: 20px;
+}
+@media (min-width: 768px) {
+	html {
+		font-size: 40px;
+	}
+}
+
 body {
 	background: #202020;
-	font-size: 16px;
 }
 
 h1 {
-	font-family: 'Roboto Slab', serif;
 	position: absolute;
-	left: 1%;
+	left: 0;
 	bottom: 20%;
+	text-align: center;
+	padding: 0 1rem;
 }
+
 h1 span {
 	display: block;
-	font-size: 13rem;
-	letter-spacing: -0.3rem;
-	line-height: 103px;
-	color: #E74C3C;
+	-webkit-transition: all 0.3s;
+	transition: all 0.1s;
 }
+
 h1 .small {
-	font-size: 4.4rem;
-	letter-spacing: -0.05rem;
+	font-size: 2rem;
 	font-weight: 400;
 	color: #3498DB;
+	line-height: 1;
 }
+
+h1 .name {
+	font-size: 4rem;
+	color: #E74C3C;
+	line-height: 2.9rem;
+}
+
 h1 .tag {
-	font-family: 'Roboto', sans-serif;
-	font-weight: 400;
-	text-align: center;
-	color: rgba(255, 255, 255, 0.15);
+	font-weight: 300;
+	color: rgba(255, 255, 255, 0.2);
 	letter-spacing: 0;
-	font-size: 1rem;
-	text-indent: -1.2rem;
+	font-size: 0.77rem;
+	padding-top: 1rem;
+	line-height: 1.2;
+	text-indent: -0.2rem;
 }
 
 #wrapper {
@@ -56,26 +73,32 @@ h1 .tag {
 	overflow: hidden;
 }
 
+/**
+ * Width of each child = 12.5rem;
+ * Width of photo in each child = 12.5 * 2 = 25rem;
+ * Total horizontal width = each_child_width * no_of_childs_space;
+ */
+
 #scroller {
-	width: 5500px;
+	width: 130rem;
 	height: 100%;
 	float: left;
 	padding: 0;
 }
 
 #scroller ul {
+	width: 130rem;
+	height: 100%;
 	list-style: none;
 	display: block;
 	float: left;
-	width: 5500px;
-	height: 100%;
 	margin: 0;
 	padding: 0;
 	text-align: left;
 }
 
 .child {
-	width: 500px;
+	width: 12.5rem;
 	height: 100%;
 	position: absolute;
 	top: 0;
@@ -102,7 +125,7 @@ h1 .tag {
 }
 
 .child .photo {
-	width: 1000px;
+	width: 25rem;
 	height: 100%;
 	position: absolute;
 	top: 0;
@@ -127,29 +150,29 @@ h1 .tag {
 	transform: skew(+20deg) scale(1.05);
 }
 
-.child .photo:after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
+.filter {
+	width: 12.5rem;
 	height: 100%;
-	background: -moz-linear-gradient(45deg,  rgba(52,152,219,1) 0%, rgba(231,76,60,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(52,152,219,1)), color-stop(100%,rgba(231,76,60,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(45deg,  rgba(52,152,219,1) 0%,rgba(231,76,60,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(45deg,  rgba(52,152,219,1) 0%,rgba(231,76,60,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(45deg,  rgba(52,152,219,1) 0%,rgba(231,76,60,1) 100%); /* IE10+ */
-	background: linear-gradient(45deg,  rgba(52,152,219,1) 0%,rgba(231,76,60,1) 100%); /* W3C */
-	opacity: 0.3;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 3;
+	background: -moz-linear-gradient(45deg, rgba(26,188,156,0.2) 0%, rgba(241,196,15,0.2) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(26,188,156,0.2)), color-stop(100%,rgba(241,196,15,0.2))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(45deg, rgba(26,188,156,0.2) 0%,rgba(241,196,15,0.2) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(45deg, rgba(26,188,156,0.2) 0%,rgba(241,196,15,0.2) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(45deg, rgba(26,188,156,0.2) 0%,rgba(241,196,15,0.2) 100%); /* IE10+ */
+	background: linear-gradient(45deg, rgba(26,188,156,0.2) 0%,rgba(241,196,15,0.2) 100%); /* W3C */
 }
 
 .iScrollHorizontalScrollbar {
 	position: absolute;
 	z-index: 9999;
-	height: 15px;
-	left: 10px;
-	right: 10px;
-	bottom: 10px;
+	height: 0.5rem;
+	left: 0.3rem;
+	right: 0.3rem;
+	bottom: 0.3rem;
 	overflow: hidden;
 	/**/
 	-webkit-transform: skew(-20deg);
@@ -160,7 +183,7 @@ h1 .tag {
 .iScrollIndicator {
 	position: absolute;
 	background: rgba(255, 255, 255,0.1);
-	height: 15px;
+	height: 0.5rem;
 }
 
 .iScrollIndicator:hover,
@@ -168,76 +191,92 @@ h1 .tag {
 	background: rgba(255, 255, 255,0.5);
 }
 
+.iScrollIndicator:hover {
+	cursor: -webkit-grab;
+}
+
+.iScrollIndicator:active {
+	cursor: -webkit-grabbing;
+}
+
+
+
+/**
+ * CAN BE REMOVED FOR ACTUAL USAGE
+ * ===============================
+ * Ignore the following styles
+ * They are purely for back linking
+ * to the original description article
+ */
 .info {
-	width: 300px;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	left: auto !important;
-	overflow: hidden;
-	display: table;
+    width: 10rem;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: auto !important;
+    overflow: hidden;
+    display: table;
 }
 
 .info .cell {
-	display: table-cell;
-	text-align: center;
-	vertical-align: middle;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
 }
 
-.logo {
-	width: 123px;
-	height: 86px;
-	position: relative;
-	display: block;
-	margin: 0 auto;
-	background: url(http://www.vijaydev.com/public/img/logo-wm.svg) 0 0 no-repeat;
-	background-size: 123px auto; 
-	text-decoration: none;
+.info .logo {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    text-decoration: none;
 }
 
-.logo img {
-	width: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	-webkit-transition: opacity 0.3s ease-in-out;
-	-moz-transition: opacity 0.3s ease-in-out;
-	transition: opacity 0.3s ease-in-out;
+.info .logo img {
+	width: 3.075rem;
+	height: 2.15rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -1.537rem;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
 }
 
-.logo .nor {
+.info .logo .nor {
 	opacity: 1;
 }
 
-.logo .hov {
+.info .logo .hov {
 	opacity: 0;
 }
 
-.logo:hover .nor {
+.info .logo:hover .nor {
 	opacity: 0;
 }
 
-.logo:hover .hov {
+.info .logo:hover .hov {
 	opacity: 1;
 }
 
-.logo .title {
+.info .logo .title {
 	font-family: 'Roboto', sans-serif;
 	text-align: center;
-	color: rgba(255, 255, 255, 0.05);
+	color: rgba(255, 255, 255, 0.1);
 	letter-spacing: 0;
-	font-size: 0.75rem;
+	font-size: 0.5rem;
+	font-weight: 300;
 	display: block;
-	padding: 130px 0 0;
+	padding: 3.25rem 0 0;
 	white-space: nowrap;
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
 
-.logo:hover .title {
-	padding: 120px 0 0;
+.info .logo:hover .title {
+	padding: 3rem 0 0;
 	color: rgba(255, 255, 255, 0.5);
 }
