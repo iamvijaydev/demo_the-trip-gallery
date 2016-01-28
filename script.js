@@ -15,8 +15,8 @@
 		$thelist = document.getElementById('thelist');
 		$thelistChilds = $thelist.children;
 		for (i = 0; i < $thelistChilds.length; i++) {
-			left += 500;
-			$thelistChilds[i].style.left = left + 'px';
+			left += 12.5;
+			$thelistChilds[i].style.left = left + 'rem';
 		};
 
 		// setup iScroll
