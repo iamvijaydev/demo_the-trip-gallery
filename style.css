@@ -150,20 +150,32 @@ h1 .tag {
 	transform: skew(+20deg) scale(1.05);
 }
 
-.filter {
-	width: 12.5rem;
-	height: 100%;
+.child .photo:after {
+	content: '';
 	position: absolute;
-	top: 0;
-	bottom: 0;
 	left: 0;
-	z-index: 3;
-	background: -moz-linear-gradient(45deg, rgba(26,188,156,0.2) 0%, rgba(241,196,15,0.2) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(26,188,156,0.2)), color-stop(100%,rgba(241,196,15,0.2))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(45deg, rgba(26,188,156,0.2) 0%,rgba(241,196,15,0.2) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(45deg, rgba(26,188,156,0.2) 0%,rgba(241,196,15,0.2) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(45deg, rgba(26,188,156,0.2) 0%,rgba(241,196,15,0.2) 100%); /* IE10+ */
-	background: linear-gradient(45deg, rgba(26,188,156,0.2) 0%,rgba(241,196,15,0.2) 100%); /* W3C */
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.2;
+}
+
+.child:nth-child(odd) .photo:after {
+	background: -moz-linear-gradient(45deg, rgba(26,188,156,1) 0%, rgba(241,196,15,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(26,188,156,1)), color-stop(100%,rgba(241,196,15,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(45deg, rgba(26,188,156,1) 0%,rgba(241,196,15,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(45deg, rgba(26,188,156,1) 0%,rgba(241,196,15,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(45deg, rgba(26,188,156,1) 0%,rgba(241,196,15,1) 100%); /* IE10+ */
+	background: linear-gradient(45deg, rgba(26,188,156,1) 0%,rgba(241,196,15,1) 100%); /* W3C */
+}
+
+.child:nth-child(even) .photo:after {
+	background: -moz-linear-gradient(45deg, rgba(52,152,219,1) 0%, rgba(231,76,60,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(52,152,219,1)), color-stop(100%,rgba(231,76,60,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(45deg, rgba(52,152,219,1) 0%,rgba(231,76,60,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(45deg, rgba(52,152,219,1) 0%,rgba(231,76,60,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(45deg, rgba(52,152,219,1) 0%,rgba(231,76,60,1) 100%); /* IE10+ */
+	background: linear-gradient(45deg, rgba(52,152,219,1) 0%,rgba(231,76,60,1) 100%); /* W3C */
 }
 
 .iScrollHorizontalScrollbar {
