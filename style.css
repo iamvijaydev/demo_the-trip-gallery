@@ -50,16 +50,22 @@ h1 .name {
 	font-size: 4rem;
 	color: #E74C3C;
 	line-height: 2.9rem;
+	font-weight: 700;
 }
 
 h1 .tag {
+	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
-	color: rgba(255, 255, 255, 0.2);
-	letter-spacing: 0;
-	font-size: 0.77rem;
-	padding-top: 1rem;
-	line-height: 1.2;
-	text-indent: -0.2rem;
+	color: rgba(255, 255, 255, 0.25);
+	font-size: 0.7rem;
+	line-height: 1;
+	text-indent: -0.1rem;
+
+	border-top: 1px solid rgba(255, 255, 255, 0.15);
+	margin: 1rem 0 0;
+	padding: 0.6rem 0 0;
+	text-transform: uppercase;
+	letter-spacing: -0.02rem;
 }
 
 #wrapper {
@@ -278,7 +284,7 @@ h1 .tag {
 	font-size: 0.5rem;
 	font-weight: 300;
 	display: block;
-	padding: 3.25rem 0 0;
+	padding: 3rem 0 0;
 	white-space: nowrap;
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -286,6 +292,6 @@ h1 .tag {
 }
 
 .info .logo:hover .title {
-	padding: 3rem 0 0;
+	padding: 2.5rem 0 0;
 	color: rgba(255, 255, 255, 0.5);
 }
