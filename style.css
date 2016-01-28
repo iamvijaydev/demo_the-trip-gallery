@@ -28,9 +28,9 @@ body {
 h1 {
 	position: absolute;
 	left: 0;
-	bottom: 20%;
+	bottom: 2rem;
 	text-align: center;
-	padding: 0 1rem;
+	padding: 0 0.5rem;
 }
 
 h1 span {
@@ -221,7 +221,7 @@ h1 .tag {
  * to the original description article
  */
 .info {
-    width: 10rem;
+    width: 7rem;
     height: 100%;
     position: absolute;
     top: 0;
@@ -229,13 +229,10 @@ h1 .tag {
     right: 0;
     left: auto !important;
     overflow: hidden;
-    display: table;
 }
 
 .info .cell {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
+    padding: 2rem 0 0;
 }
 
 .info .logo {
