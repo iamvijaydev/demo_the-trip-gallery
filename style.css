@@ -138,7 +138,7 @@ h1 .tag {
 	left: -50%;
 	background-position: center;
 	background-size: cover;
-	opacity: 0.5;
+	filter: opacity(0.5);
 	/**/
 	-webkit-transform: skew(+20deg) scale(1);
 	-moz-transform: skew(+20deg) scale(1);
@@ -149,7 +149,7 @@ h1 .tag {
 	transition: all 0.3s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 }
 .child:hover .photo {
-	opacity: 1;
+	filter: opacity(1);
 	/**/
 	-webkit-transform: skew(+20deg) scale(1.05);
 	-moz-transform: skew(+20deg) scale(1.05);
